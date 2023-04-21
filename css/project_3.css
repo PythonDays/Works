@@ -1,0 +1,41 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+.hf{
+  text-align:center;
+  background-color:#465C69;
+  padding-bottom: 0;
+}
+.bio{
+  text-align:center;
+  background-color: #98A886;
+
+  }
+
+.grid{
+  text-align:center;
+  background-color:#465C69;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-item5{
+  color:white;
+  text-align:center;
+  background-color: #171738;
+  width:50%;
+}
+.bio1{
+  width: 10%;
+}
+.biopic{
+  width:28%;
+
+}
+.space{
+  width:20%;
+  background-color:#465C69;
+  height:100%;
+
+}

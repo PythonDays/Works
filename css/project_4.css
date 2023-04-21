@@ -1,0 +1,41 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+#header{
+  height:100px;
+  background-color:black;
+  color:white;
+}
+#body{
+  height:280px;
+  text-align:center;
+}
+#footer{
+  background-color:#395756;
+}
+#right{
+  background-color:#395756;
+}
+#left{
+  background-color:#395756;
+}
+#bio{
+  background-color: #98A886;
+  min-width:200px;
+  padding-top:2%;
+  padding-left:2%;
+
+}
+#form{
+  background-color: #1B3022;
+  color:white;
+}
+#pic{
+  width:100%;
+  height:80%;
+}
+#picture{
+  background-color:#395756;
+  min-width:200px;
+}
+
