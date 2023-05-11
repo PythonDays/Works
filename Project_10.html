@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hello Google Maps</title>
+  <script src="js/project_10.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="css/project_10.css">
+
+</head>
+
+<body>
+    <div id="map" style="width: 600px; height: 400px;"></div>
+    <div>
+        <h3>Place Marker</h3>
+        <form id="markerForm">
+            <label for="markerLat">Latitude:</label>
+            <input type="text" id="markerLat" name="markerLat">
+            <br>
+            <label for="markerLng">Longitude:</label>
+            <input type="text" id="markerLng" name="markerLng">
+            <br>
+            <button type="submit">Place Marker</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Get Path</h3>
+        <form id="pathForm">
+            <label for="origin">Origin:</label>
+            <input type="text" id="origin" name="origin">
+            <br>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination">
+            <br>
+            <button type="submit">Get Path</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Place Circle</h3>
+        <form id="circleForm">
+            <label for="circleLat">Latitude:</label>
+            <input type="text" id="circleLat" name="circleLat">
+            <br>
+            <label for="circleLng">Longitude:</label>
+            <input type="text" id="circleLng" name="circleLng">
+            <br>
+            <label for="circleRadius">Radius (in meters):</label>
+            <input type="text" id="circleRadius" name="circleRadius">
+            <br>
+            <button type="submit">Place Circle</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Place Rectangle</h3>
+        <form id="rectangleForm">
+            <label for="rectangleLat">Latitude:</label>
+            <input type="text" id="rectangleLat" name="rectangleLat">
+            <br>
+            <label for="rectangleLng">Longitude:</label>
+            <input type="text" id="rectangleLng" name="rectangleLng">
+            <br>
+            <label for="rectangleWidth">Width (in meters):</label>
+            <input type="text" id="rectangleWidth" name="rectangleWidth">
+            <br>
+            <label for="rectangleHeight">Height (in meters):</label>
+            <input type="text" id="rectangleHeight" name="rectangleHeight">
+            <br>
+            <button type="submit">Place Rectangle</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Place Polygon</h3>
+        <form id="polygonForm">
+            <label for="polygonCoords">Coordinates (comma-separated):</label>
+            <input type="text" id="polygonCoords" name="polygonCoords">
+            <br>
+            <button type="submit">Place Polygon</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Place Polylines</h3>
+        <form id="polylineForm">
+            <label for="polylineCoords1">Coordinate 1:</label>
+            <input type="text" id="polylineCoords1" name="polylineCoords1">
+            <br>
+            <label for="polylineCoords2">Coordinate 2:</label>
+          <input type="text" id="polylineCoords">
+          <button type="submit">Place Polylines</button>
+          </form>
+    </div>
+
