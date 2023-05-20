@@ -2,7 +2,7 @@ import openai
 import os
 
 # Set up your OpenAI API credentials
-openai.api_key = 'YOUR_API_KEY'
+openai.api_key = 'X'
 
 # Define the prompt to generate code for a Python project
 prompt = """
@@ -10,13 +10,14 @@ Generate Python code for a simple project:
 
 Project: Project_number
 
-Description: Write a Python program that does...
+Description: Write a python project at the best level of coding you can execute. you need to be sure it works and
+don't repeat yourself
 
 Code:
 """
 
 # Generate code for 10 projects
-for i in range(1, 11):
+for i in range(1, 31):
     project_prompt = prompt.replace("Project_number", str(i))
 
     # Generate code from GPT-3 model
@@ -33,7 +34,7 @@ for i in range(1, 11):
     generated_code = response.choices[0].text.strip()
 
     # Create a new .py file for each project
-    filename = f"project{i}.py"
+    filename = f"projects{i}.py"
     with open(filename, 'w') as file:
         file.write(generated_code)
 
