@@ -4,7 +4,7 @@ let polylines = [];
 
 function loadGoogleMapsScript() {
   const script = document.createElement("script");
-  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB6bRbu7plrXP8WkclcAWCpHKAuDYzgY9I&callback=initMap&v=weekly";
+  script.src = "https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly";
   script.defer = true;
 
   document.head.appendChild(script);
