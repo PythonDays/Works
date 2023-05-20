@@ -7,7 +7,7 @@ reddit_client_secret = 'zMch1-6NR1nIT_PCgGJOWEFu5_23_w'
 reddit_user_agent = 'myapp'
 
 # OpenAI API credentials
-openai_api_key = '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'
+openai_api_key = 'Your_API_Key'
 
 # Initialize Reddit API
 reddit = praw.Reddit(client_id=reddit_client_id,
