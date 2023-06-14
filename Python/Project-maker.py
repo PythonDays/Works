@@ -2,7 +2,7 @@ import openai
 import os
 
 # Set up your OpenAI API credentials
-openai.api_key = 'X'
+openai.api_key = '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'
 
 # Define the prompt to generate code for a Python project
 prompt = """
@@ -24,7 +24,7 @@ for i in range(1, 31):
     response = openai.Completion.create(
         engine='text-davinci-003',
         prompt=project_prompt,
-        max_tokens=200,
+        max_tokens=500,
         n=1,
         stop=None,
         temperature=0.7

@@ -1,27 +1,50 @@
-# Import the necessary modules
-import pandas as pd
-import numpy as np
+#Importing necessary libraries
+import time
+import random
 
-# Read in the data
-data = pd.read_csv('data.csv')
+#Defining the function
+def run_game():
+    print("Welcome to the game!")
+    time.sleep(2)
 
-# Split the data into features and labels
-X = data.drop('label', axis=1)
-y = data['label']
+    #Creating a list of possible choices
+    choices = ["rock", "paper", "scissors"]
 
-# Split the data into train and test datasets
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+    #Initializing the score
+    player_score = 0
+    computer_score = 0
 
-# Train the model
-from sklearn.ensemble import RandomForestClassifier
-clf = RandomForestClassifier(n_estimators=100, random_state=0)
-clf.fit(X_train, y_train)
-#Make predictions on the test data
+    #Game loop
+    while (player_score < 3 and computer_score < 3):
+        #Prompting the player for a choice
+        player_choice = input("Choose rock, paper or scissors: ")
+        
+        #Validating the choice
+        if player_choice not in choices:
+            print("Invalid choice, please try again.")
+            continue
+        
+        #Generating a random choice for the computer
+        computer_choice = random.choice(choices)
+        print("Computer chose: " + computer_choice)
 
-predictions = clf.predict(X_test)
-#Evaluate the model
+        #Determining the winner
+        if (player_choice == "rock" and computer_choice == "scissors") or (player_choice == "paper" and computer_choice == "rock") or (player_choice == "scissors" and computer_choice == "paper"):
+            print("You win!")
+            player_score += 1
+        elif (player_choice == computer_choice):
+            print("Draw!")
+        else:
+            print("Computer wins!")
+            computer_score += 1
+        print("Current score is: Player: " + str(player_score) + " Computer: " + str(computer_score))
+        time.sleep(2)
 
-from sklearn.metrics import accuracy_score
-accuracy = accuracy_score(y_test, predictions)
-print("Accuracy:", accuracy)
+    #Determining the grand winner
+    if player_score == 3:
+        print("You won the game!")
+    else:
+        print("Computer won the game!")
+
+#Calling the function
+run_game()

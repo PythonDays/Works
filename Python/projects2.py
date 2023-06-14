@@ -1,31 +1,43 @@
-#Imports
-import math
-import random
-import string
+#import modules
+import os
+import sys
 
-#Variables
-num_letters = 5
+#define functions
+def welcome():
+    print("Welcome to this python project!")
+    
+def menu():
+    print("Please choose an option from the menu:")
+    print("1. Print File")
+    print("2. Rename File")
+    print("3. Exit")
 
-#Functions
-def generate_word():
-    '''Generates a random word of size num_letters'''
-    letters = string.ascii_lowercase
-    word = ''
-    for i in range(num_letters):
-        word += random.choice(letters)
-    return word
+def printFile():
+    filename = input("Please enter the name of the file you wish to print: ")
+    try:
+        with open(filename) as f:
+            content = f.read()
+            print(content)
+    except FileNotFoundError:
+        print("Sorry, the file was not found.")
+    
+def renameFile():
+    oldName = input("Please enter the name of the file you wish to rename: ")
+    newName = input("Please enter the new name for the file: ")
+    os.rename(oldName, newName)
+    print("The file has been renamed successfully.")
 
-def calculate_word_value(word):
-    '''Calculates the value of a given word
-    by summing the ordinal values of each letter'''
-    total = 0
-    for letter in word:
-        total += ord(letter)
-    return total
+#main program
+welcome()
 
-def main():
-    '''Main logic to be executed'''
-    global num_letters
-
-
-print(calculate_word_value(generate_word()))
+while True:
+    menu()
+    option = input()
+    if option == "1":
+        printFile()
+    elif option == "2":
+        renameFile()
+    elif option == "3":
+        sys.exit()
+    else:
+        print("Invalid option. Please try again.")
